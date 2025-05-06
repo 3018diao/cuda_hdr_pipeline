@@ -1,0 +1,28 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# 工具和实用程序
+
+项目包含一系列工具和实用程序，用于支持 HDR 图像处理流水线。
+
+## 工具类
+
+- **参数解析**：[src/utils/argparse.h](mdc:src/utils/argparse.h) 和 [src/utils/argparse.cpp](mdc:src/utils/argparse.cpp) - 处理命令行参数
+- **图像处理**：[src/utils/image.h](mdc:src/utils/image.h) - 定义图像数据结构和基本操作
+- **I/O 操作**：[src/utils/io.h](mdc:src/utils/io.h) - 定义输入输出接口
+
+## CUDA 工具
+
+CUDA 相关工具位于 [src/utils/cuda/](mdc:src/utils/cuda) 目录：
+- 内存管理
+- 错误处理
+- 设备信息
+- 事件处理
+- 数组操作
+
+## 图像输入输出
+
+[src/utils/io/](mdc:src/utils/io) 目录包含图像文件格式处理代码：
+- PNG 文件支持

@@ -1,0 +1,21 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# HDR 图像处理流水线
+
+这是一个基于 CUDA 的 HDR（高动态范围）图像处理流水线项目。主要功能包括 HDR 图像的加载、处理和转换为 LDR（低动态范围）图像以输出。
+
+## 主要组件
+
+- **入口点**：[src/main.cpp](mdc:src/main.cpp) - 程序的主入口，处理命令行参数和主流程控制
+- **HDR 流水线**：[src/hdr_pipeline.h](mdc:src/hdr_pipeline.h) 和 [src/hdr_pipeline.cpp](mdc:src/hdr_pipeline.cpp) - 核心处理流水线
+- **CUDA 实现**：[src/hdr_pipeline.cu](mdc:src/hdr_pipeline.cu) - 包含 CUDA 核函数实现
+- **环境贴图处理**：[src/envmap.h](mdc:src/envmap.h) 和 [src/envmap.cpp](mdc:src/envmap.cpp) - 环境贴图加载和处理
+
+## 构建系统
+
+项目使用 CMake 构建：
+- 根目录 [CMakeLists.txt](mdc:CMakeLists.txt)
+- 源代码目录 [src/CMakeLists.txt](mdc:src/CMakeLists.txt)

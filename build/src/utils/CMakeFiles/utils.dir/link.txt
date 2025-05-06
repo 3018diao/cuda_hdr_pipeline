@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../lib/libutils.a CMakeFiles/utils.dir/io/radiance.cpp.o CMakeFiles/utils.dir/io/pfm.cpp.o CMakeFiles/utils.dir/io/png.cpp.o CMakeFiles/utils.dir/io/obj.cpp.o CMakeFiles/utils.dir/argparse.cpp.o
+/usr/bin/ranlib ../../lib/libutils.a

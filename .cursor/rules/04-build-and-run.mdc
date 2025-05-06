@@ -1,0 +1,40 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# 构建和运行指南
+
+本项目使用 CMake 进行构建，需要 CUDA 工具包支持。
+
+## 构建系统
+
+- **项目配置**：[CMakeLists.txt](mdc:CMakeLists.txt) - 根目录构建配置
+- **源代码配置**：[src/CMakeLists.txt](mdc:src/CMakeLists.txt) - 源代码目录构建配置
+- **工具配置**：[src/utils/CMakeLists.txt](mdc:src/utils/CMakeLists.txt) - 工具库构建配置
+
+## 构建步骤
+
+1. 创建构建目录：`mkdir build && cd build`
+2. 配置项目：`cmake ..`
+3. 编译：`cmake --build .`
+
+## 运行程序
+
+程序使用方法:
+```
+hdr_pipeline [{options}] {<input-file>}
+options:
+  --device <i>          使用CUDA设备<i>，默认值: 0
+  --exposure <v>        设置曝光值为<v>，默认值: 0.0
+  --brightpass <v>      设置亮度通道阈值为<v>，默认值: 0.9
+  --test-runs <N>       平均计时使用<N>次测试运行，默认值: 1
+```
+
+## 示例
+
+```bash
+./hdr_pipeline --device 0 --exposure 1.5 --brightpass 0.85 input.hdr
+```
+
+这将处理 input.hdr 文件，使用 CUDA 设备 0，曝光值为 1.5，亮度通道阈值为 0.85，并输出为 input.png。

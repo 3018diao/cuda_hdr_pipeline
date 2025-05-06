@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/imgdiff.dir/main.cpp.o -o ../../../bin/imgdiff  ../../../lib/libutils.a /usr/lib/x86_64-linux-gnu/libpng.so /usr/lib/x86_64-linux-gnu/libz.so 

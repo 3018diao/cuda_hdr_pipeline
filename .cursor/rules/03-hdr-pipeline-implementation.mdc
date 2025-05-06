@@ -1,0 +1,32 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# HDR 流水线实现
+
+本项目实现了一个基于 CUDA 的 HDR 图像处理流水线，主要用于将高动态范围图像转换为低动态范围图像以便于显示。
+
+## 核心实现文件
+
+- **HDR 流水线类**：[src/hdr_pipeline.h](mdc:src/hdr_pipeline.h) - 定义了 `HDRPipeline` 类接口
+- **CPU 实现部分**：[src/hdr_pipeline.cpp](mdc:src/hdr_pipeline.cpp) - 实现了 `HDRPipeline` 类的方法
+- **GPU 实现部分**：[src/hdr_pipeline.cu](mdc:src/hdr_pipeline.cu) - 包含 CUDA 核函数实现
+
+## 核心流程
+
+1. 加载 HDR 环境贴图 - 在 [src/envmap.cpp](mdc:src/envmap.cpp) 中实现
+2. 将图像数据传输到 GPU
+3. 执行 HDR 到 LDR 的转换，包括：
+   - 色调映射
+   - 曝光调整
+   - 亮度通道处理
+4. 将处理后的图像从 GPU 传回 CPU
+5. 保存为 PNG 格式
+
+## 命令行参数
+
+- `--device <i>` - 选择使用的 CUDA 设备
+- `--exposure <v>` - 设置曝光值
+- `--brightpass <v>` - 设置亮度通道阈值
+- `--test-runs <N>` - 指定测试运行次数

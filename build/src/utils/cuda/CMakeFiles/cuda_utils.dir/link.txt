@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../lib/libcuda_utils.a CMakeFiles/cuda_utils.dir/error.cpp.o CMakeFiles/cuda_utils.dir/device.cpp.o
+/usr/bin/ranlib ../../../lib/libcuda_utils.a

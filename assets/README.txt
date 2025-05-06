@@ -1,0 +1,1 @@
+HDR images from http://www.hdrlabs.com/sibl/archive.html
