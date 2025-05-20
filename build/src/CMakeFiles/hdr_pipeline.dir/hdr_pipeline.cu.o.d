@@ -157,4 +157,12 @@ src/CMakeFiles/hdr_pipeline.dir/hdr_pipeline.cu.o : /home/huiyu/hdr-pipeline-tas
     /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h \
     /usr/include/stdint.h \
     /usr/include/x86_64-linux-gnu/bits/wchar.h \
-    /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
+    /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+    /home/huiyu/hdr-pipeline-task1/src/utils/cuda/error.h \
+    /usr/include/c++/11/exception \
+    /usr/include/c++/11/bits/exception_ptr.h \
+    /usr/include/c++/11/bits/exception_defines.h \
+    /usr/include/c++/11/bits/cxxabi_init_exception.h \
+    /usr/include/c++/11/typeinfo \
+    /usr/include/c++/11/bits/hash_bytes.h \
+    /usr/include/c++/11/bits/nested_exception.h
